@@ -14,7 +14,7 @@ Features
     Order: The production units in the company would be able to send order the material via the application to the warehouse.
     Store: the rpoduction unit can reach the staplers to came and take the finished product
 <<<<<<< HEAD
-    For more information about the planing of thr application, please see the wireframe on the link https://app.moqups.com/unsaved/ba919dca/edit/page/ad64222d5
+    For more information about the planing of thr application, please see the wireframe on the link https://app.moqups.com/hadelesko/dcyYeE2eiw/view
 =======
 >>>>>>> 410f0c816dd02390b9224cc5ef1d36e3cf9fd0e1
 

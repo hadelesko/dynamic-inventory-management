@@ -1,7 +1,5 @@
 package org.launchcode.inventorymanagement.data;
-
-import com.sun.istack.internal.NotNull;
-
+import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -10,7 +8,7 @@ public class Order {
     @Id
     @GeneratedValue
     private int id;
-    @NotNull
+
     private String productlinename;
     private int schift;
 

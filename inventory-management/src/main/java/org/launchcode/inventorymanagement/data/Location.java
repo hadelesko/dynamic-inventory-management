@@ -1,8 +1,8 @@
 package org.launchcode.inventorymanagement.data;
 
 public class Location {
-    private int  id
-    private boolean is_free
+    private int  id;
+    private boolean is_free;
 
     public int getId() {
         return id;

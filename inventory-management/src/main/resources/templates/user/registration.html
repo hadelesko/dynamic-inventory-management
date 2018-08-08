@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Inventory management</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-
 
 
 <body>
@@ -20,25 +19,26 @@
 
 <form method="POST" action="register">
 
-    <div class="form-group">
+    <table class="table1">
 
-        <label th:for="Username">Name</label>
+        <tr><td><label th:for="Username">Name</label></td>
 
-        <input type="text" /><br/>
-<table>
+            <td><input type="text"/></td></tr>
+
         <tr>
             <td>
                 <label>Personal Id </label></td>
-                <td>
-                    <input type="text"/>
-                </td>
+            <td>
+                <input type="text"/>
+            </td>
         </tr>
-</table>
-        <tb><label>Password</label><input type="password" /><br/>
 
-        <input type="submit" value="submit registration"/>
 
-    </div>
+        <tr><td><label>Password</label></td><td><input type="password"/></td></tr>
+
+    </table>
+
+    <input type="submit" value="submit registration"/>
 
 </form>
 

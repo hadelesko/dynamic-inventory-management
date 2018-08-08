@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Material {
-    private  String name,
+    private  String name;
     private int id;
     private double quantity;
     //ArrayList<HashMap<String,Double>> locations;

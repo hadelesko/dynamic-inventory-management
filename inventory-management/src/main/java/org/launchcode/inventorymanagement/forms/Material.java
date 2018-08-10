@@ -1,14 +1,28 @@
-package org.launchcode.inventorymanagement.data;
+package org.launchcode.inventorymanagement.forms;
 
+import javax.persistence.GeneratedValue;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Material {
+    @NotNull
+    @Size(min =4)
     private  String name;
+    @GeneratedValue
     private int id;
+    @NotNull
+    @Size(max=120)
+    private String description;
+    NotNull
     private double quantity;
     //ArrayList<HashMap<String,Double>> locations;
     private ArrayList<String> locations;
+
+    public Material(){
+
+    }
 
     public String getName() {
         return name;

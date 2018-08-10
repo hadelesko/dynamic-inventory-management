@@ -1,4 +1,4 @@
-package org.launchcode.inventorymanagement.data;
+package org.launchcode.inventorymanagement.forms;
 
 import java.util.ArrayList;
 import java.util.Date;

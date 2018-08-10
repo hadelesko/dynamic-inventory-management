@@ -1,4 +1,4 @@
-package org.launchcode.inventorymanagement.data;
+package org.launchcode.inventorymanagement.forms;
 import javax.persistence.*;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

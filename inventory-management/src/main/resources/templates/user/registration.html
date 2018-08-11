@@ -20,24 +20,23 @@
 
 <form method="POST" action="register">
 
-    <table class="table1">
+    <div class="table1">
 
-        <tr><td><label th:for="Username">Name</label></td>
+        <label th:for="Username">Name</label>>
 
-            <td><input type="text"/></td></tr>
-
-        <tr>
-            <td>
-                <label>Personal Id </label></td>
-            <td>
-                <input type="text"/>
-            </td>
-        </tr>
-
-
-        <tr><td><label>Password</label></td><td><input type="password"/></td></tr>
-
-    </table>
+        <input type="text"/>
+        <span></span>
+    </div>
+    <div>
+        <label th:for="personalId">Personal Id </label>
+        <input name="personalId" th:text="${personalId}"/>
+        <span></span>
+    </div>
+    <div>
+        <label th:for="password">Password</label>
+        <input type="password" name ="password" th:value="${password}"/>
+        <span></span>
+    </div>
 
     <input type="submit" value="submit registration"/>
 

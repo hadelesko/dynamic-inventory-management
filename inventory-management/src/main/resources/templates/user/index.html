@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <h1 th:text="${title}">Default Title</h1>
+
+    <nav th:replace="fragments :: navigation_user"></nav>
+
+</head>
+<body>
+    <h4>you  can <a href="/user/login">Login</a> here if you have already registered |
+    or <a href="/user/registration">register</a> if you have not registered before|</h4>
+</body>
+</html>

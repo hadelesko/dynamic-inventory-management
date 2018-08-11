@@ -52,28 +52,5 @@ public class MaterialController {
         return "material/add";
     }
 
-    @RequestMapping(value = "add", method = RequestMethod.POST)
-    public String processAddMaterial(@ModelAttribute @Valid Material newmaterial,
-                                       Errors errors, Model model, @CookieValue(value = "user", defaultValue = "none") String username) {
-
-        if(.equals("none")) {
-            return "redirect:/user/login";
-        }
-        Material m = materialdao.findmaterialname(materialname).get(0);
-        if (errors.hasErrors()) {
-            model.addAttribute("title", "Add Material");
-            return "material/add";
-        }
-
-        newmaterial.setMaterial(material);
-
-        cheeseDao.save(material);
-        return "redirect:";
-    }
-
-    @RequestMapping(value = "addOrder/{order_id}")
-    public String proceed_add_order(){
-        return "material/order/add";
-    }
     }
 }

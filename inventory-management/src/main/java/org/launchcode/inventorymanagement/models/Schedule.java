@@ -1,4 +1,4 @@
-package org.launchcode.inventorymanagement.forms;
+package org.launchcode.inventorymanagement.models;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,7 +10,10 @@ public class Schedule {
     private ArrayList<HashMap<String,String>> workers;
     private  String productionsline;
 
-    public Schedule(int shift, Date date)
+    public Schedule(int shift, Date date){
+        this.shift=shift;
+        this.date=date;
+    }
 
     public Date getDate() {
         return date;

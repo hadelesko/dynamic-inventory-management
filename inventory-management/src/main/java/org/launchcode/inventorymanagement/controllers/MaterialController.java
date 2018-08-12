@@ -1,23 +1,19 @@
 package org.launchcode.inventorymanagement.controllers;
 
 import org.launchcode.inventorymanagement.data.MaterialDao;
-import org.launchcode.inventorymanagement.forms.Material;
+import org.launchcode.inventorymanagement.models.Material;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.validation.Valid;
-
 @Controller
-@RequestMapping(value = "material")
+@RequestMapping(value="material")
 public class MaterialController {
     @Autowired
     private MaterialDao materialDao;
+    private Material material;
 
 
 
@@ -27,9 +23,9 @@ public class MaterialController {
             return "material/index";
         }**/
 
-    @RequestMapping(value = "list")
+    @RequestMapping(value="list")
     public String listmaterial(Model model){
-        model.addAttribute("title"; "List of the materials in the warehouse");
+        model.addAttribute("title", "List of the materials in the warehouse");
         model.addAttribute("materials", materialDao.findAll());
         return "material/materiallist";
     }
@@ -42,15 +38,15 @@ public class MaterialController {
         model.addAttribute("title", "Add Material");
 
 
-        if(name.equals("none")) {
+        if(material.getName().equals("none")) {
             return "redirect:/material/index";
         }
 
         model.addAttribute("title", "Add Material");
-        model.addAttribute(new material());
-        model.addAttribute("material", material.values());
+        model.addAttribute(material);
+        model.addAttribute("material", material.getQuantity());
         return "material/add";
     }
 
     }
-}
+

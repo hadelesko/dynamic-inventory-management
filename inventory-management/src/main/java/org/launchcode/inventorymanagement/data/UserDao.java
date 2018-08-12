@@ -1,11 +1,12 @@
 package org.launchcode.inventorymanagement.data;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
+import org.launchcode.inventorymanagement.models.User;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public class UserDao extends CrudRepository<User, Integer> {
+public interface UserDao extends CrudRepository<User, Integer> {
 }

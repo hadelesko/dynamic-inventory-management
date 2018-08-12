@@ -1,27 +1,31 @@
-package org.launchcode.inventorymanagement.forms;
+package org.launchcode.inventorymanagement.models;
 
 import javax.persistence.GeneratedValue;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Material {
     @NotNull
-    @Size(min =4)
+    @Size(min =4, message = "At least 4 characters")
     private  String name;
     @GeneratedValue
     private int id;
     @NotNull
-    @Size(max=120)
+    @Size(max=120, message = "not more than 120 characters")
     private String description;
-    NotNull
+    @NotNull
     private double quantity;
+    @NotNull
+    //private Location location;
     //ArrayList<HashMap<String,Double>> locations;
-    private ArrayList<String> locations;
+    private ArrayList<String> locations=new ArrayList<String>();
 
     public Material(){
 
+    }
+    public Material(String name){
+        this.name=name;
     }
 
     public String getName() {

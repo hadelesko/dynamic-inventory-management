@@ -1,4 +1,4 @@
-package org.launchcode.inventorymanagement.models;
+package org.launchcode.inventorymanagement.models.form;
 
 import java.util.ArrayList;
 import java.util.Date;

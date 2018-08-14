@@ -1,6 +1,7 @@
 package org.launchcode.inventorymanagement;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 
 import static org.springframework.boot.SpringApplication.run;
 
@@ -9,6 +10,6 @@ import static org.springframework.boot.SpringApplication.run;
 public class InventoryManagementApplication {
 
 	public static void main(String[] args){
-		run(InventoryManagementApplication.class, args);
+            SpringApplication.run(InventoryManagementApplication.class, args);
 	}
 }

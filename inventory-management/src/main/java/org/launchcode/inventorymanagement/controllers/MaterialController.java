@@ -1,7 +1,7 @@
 package org.launchcode.inventorymanagement.controllers;
 
-import org.launchcode.inventorymanagement.data.MaterialDao;
-import org.launchcode.inventorymanagement.models.Material;
+import org.launchcode.inventorymanagement.models.data.MaterialDao;
+import org.launchcode.inventorymanagement.models.form.Material;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

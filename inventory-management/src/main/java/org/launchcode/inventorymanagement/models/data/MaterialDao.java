@@ -1,6 +1,6 @@
-package org.launchcode.inventorymanagement.data;
+package org.launchcode.inventorymanagement.models.data;
 
-import org.launchcode.inventorymanagement.models.Material;
+import org.launchcode.inventorymanagement.models.form.Material;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

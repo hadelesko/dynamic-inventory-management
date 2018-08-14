@@ -1,6 +1,6 @@
-package org.launchcode.inventorymanagement.models;
+package org.launchcode.inventorymanagement.models.form;
 
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -19,10 +19,14 @@ public class Material {
     @NotNull
     //private Location location;
     //ArrayList<HashMap<String,Double>> locations;
-    private ArrayList<String> locations=new ArrayList<String>();
+    private ArrayList<String> locations=new ArrayList<>();
 
-    public Material(){
+    @OneToOne(mappedBy = "orderedquantity")
+    Order neworder;
 
+    public Material(Order neworder){
+
+        this.neworder = neworder;
     }
     public Material(String name){
         this.name=name;

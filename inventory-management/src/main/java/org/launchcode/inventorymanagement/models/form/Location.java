@@ -1,10 +1,9 @@
-package org.launchcode.inventorymanagement.models;
+package org.launchcode.inventorymanagement.models.form;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
+@Entity
 public class Location {
     @NotNull
     @Size(min=3, message="At least 3 characters")
@@ -15,6 +14,9 @@ public class Location {
     private int  location_id;
 
     private boolean is_free=true;
+
+
+    public Location(){}
 
 
     public String getLocation_name() {
@@ -40,4 +42,6 @@ public class Location {
     public void setIs_free(boolean is_free) {
         this.is_free = is_free;
     }
+
+
 }

@@ -10,7 +10,7 @@ Features
 -User login all the partner involved in the product or the material management or those who need this informations have the access of can use the application after the authentification -search material or product information: will give the information about the stock level and where the material is located in the warehouse.
 
     Order: The production units in the company would be able to send order the material via the application to the warehouse.
-    Store: the rpoduction unit can reach the staplers to came and take the finished product
+    Store: the production unit can reach the staplers to came and take the finished product
 
     For more information about the planing of thr application, please see the wireframe on the link: https://app.moqups.com/hadelesko/dcyYeE2eiw/view
 

@@ -4,33 +4,31 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
-
+@Entity
 public class Material {
     @NotNull
-    @Size(min =4, message = "At least 4 characters")
-    private  String name;
+    @Size(min = 4, message = "At least 4 characters")
+    private String name;
     @GeneratedValue
     private int id;
     @NotNull
-    @Size(max=120, message = "not more than 120 characters")
+    @Size(max = 120, message = "not more than 120 characters")
     private String description;
     @NotNull
-    private double quantity;
-    @NotNull
-    //private Location location;
-    //ArrayList<HashMap<String,Double>> locations;
-    private ArrayList<String> locations=new ArrayList<>();
+    private double dispo_quantity;
 
-    @OneToOne(mappedBy = "orderedquantity")
-    Order neworder;
+    private ArrayList<String> locations = new ArrayList<>();
 
-    public Material(Order neworder){
+    @OneToMany(mappedBy="ordered_quantity")
+    private PickList picklist;
 
-        this.neworder = neworder;
-    }
-    public Material(String name){
-        this.name=name;
-    }
+
+
+    public Material(){}
+
+
+
+
 
     public String getName() {
         return name;
@@ -48,12 +46,20 @@ public class Material {
         this.id = id;
     }
 
-    public double getQuantity() {
-        return quantity;
+    public String getDescription() {
+        return description;
     }
 
-    public void setQuantity(double quantity) {
-        this.quantity = quantity;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getDispo_quantity() {
+        return dispo_quantity;
+    }
+
+    public void setDispo_quantity(double dispo_quantity) {
+        this.dispo_quantity = dispo_quantity;
     }
 
     public ArrayList<String> getLocations() {
@@ -62,5 +68,13 @@ public class Material {
 
     public void setLocations(ArrayList<String> locations) {
         this.locations = locations;
+    }
+
+    public PickList getPicklist() {
+        return picklist;
+    }
+
+    public void setPicklist(PickList picklist) {
+        this.picklist = picklist;
     }
 }

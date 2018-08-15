@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+
+<form method ="post"  th:object="${order}">
+    <div>
+        <label th:for="${order.id}"></label>
+        <input th:field="*{material}"/>
+        <span th:errors="*{material}" class="error"></span>
+    </div>
+
+    <div>
+        <label th:for="${order.destination}"></label>
+        <input th:field="*{destination}"/>
+        <span th:errors="*{destination}" class="error"></span>
+    </div>
+
+    <div>
+        <label th:for="${order.quantity}"></label>
+        <input th:field="*{quantity}"/>
+        <span th:errors="*{quantity}" class="error"></span>
+    </div>
+</form>
+
+</body>
+</html>
